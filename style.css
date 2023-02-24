@@ -21,27 +21,31 @@ body {
     --hat-height: 200px;
 }
 
-li, a , button{
+li, a , button, label{
     text-decoration: none;
     color: white;
 }
+
 /* Hat */
+
 .hat {
-  display: flex;
-  justify-content: flex-end;
+  height: var(--hat-height);
+  background-image: url(/photos/hat_banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  text-align: center;
+  line-height: var(--hat-height);
+  user-select: none;
 }
 
 .hat_img {
+  z-index: 0;
   height: var(--hat-height);
 }
 
-.hat_back {
-  display: inline-block;
-  background-color: black;
-  height: var(--hat-height);
-  width: 100%;
-}
 /* Navbar */
+
 header{
     display: flex;
     justify-content: space-between;
