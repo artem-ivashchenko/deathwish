@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+/* rgba(177, 49, 49, 1) */
+
+$header-height: 100px;
+$hat-height: $header-height * 2;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: Comfortaa, cursive;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: white;
+    background-color: #2a2a2a;
+}
+
+%resets {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  @extend %resets;
+}
+
+a{
+  @extend %resets;
+}
+
+button {
+  @extend %resets;
+}
+
+label {
+  @extend %resets;
+}
+
+/* Hat */
+
+.hat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: $hat-height;
+  background-image: url(/photos/hat_banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  text-align: center;
+  user-select: none;
+}
+
+/* Navbar */
+
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: $header-height;
+    padding: 0 10%;
+
+    background-color: #111112;
+    user-select: none;
+
+    &__logo {
+      text-transform: uppercase;
+    }
+
+    &__list {
+      list-style: none; 
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 50%;
+    }
+
+    &__li {
+      display: inline-block;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 9px;
+
+        height: 1px;
+        width: 0;
+        background-color: white;
+        transition: .5s;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+
+        height: 1px;
+        width: 0;
+        background-color: white;
+        transition: .5s;
+      }
+
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+        &:after {
+          width: 100%;
+        }
+      }
+
+      &--current-page {
+        &:before {
+          width: 100%;
+        }
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+
+    &__a {
+      display: inline-block;
+      height: $header-height;
+      line-height: $header-height;
+      padding: 0 30px;
+    }
+
+    &__contact {
+      font-family: Comfortaa, cursive;
+      font-size: 16px;
+      padding: 9px 25px;
+      background-color: rgba(177, 49, 49, 1);
+      border: none;
+      cursor: pointer;
+      border-radius: 50px;
+
+      &:hover {
+        background-color: rgba(177, 49, 49, 0.8);
+      }
+    }
+}
