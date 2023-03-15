@@ -47,7 +47,7 @@ label, button, a, li {
   justify-content: space-between;
   align-items: stretch;
   min-height: 100px;
-  padding: 0 10%;
+  padding: 0 7%;
   background-color: #111112;
   user-select: none;
 }
@@ -123,6 +123,15 @@ label, button, a, li {
   background-color: rgba(177, 49, 49, 0.8);
 }
 
+.bi {
+  display: none;
+  font-size: 45px;
+  cursor: pointer;
+}
+.bi::before {
+  color: white;
+}
+
 @media (width <= 800px) {
   .header {
     flex-direction: column;
@@ -136,14 +145,24 @@ label, button, a, li {
     padding: 20px 0;
   }
   .header__nav {
-    display: flex;
-    align-self: center;
+    display: none;
   }
   .header__logo {
     height: 100px;
   }
   .header__contact {
     margin-bottom: 20px;
+  }
+  .bi {
+    position: absolute;
+    display: block;
+    right: 7%;
+    top: 50px;
+    transform: translateY(-50%);
+  }
+  .header__nav.active {
+    display: flex;
+    align-self: center;
   }
 }
 
