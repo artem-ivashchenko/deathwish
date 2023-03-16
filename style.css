@@ -165,5 +165,9 @@ label, button, a, li {
     align-self: center;
   }
 }
+.text {
+  margin: auto;
+  max-width: 400px;
+}
 
 /*# sourceMappingURL=style.css.map */
