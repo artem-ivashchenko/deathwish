@@ -80,7 +80,7 @@ label, button, a, li {
   content: "";
   position: absolute;
   right: 0;
-  top: 9px;
+  top: 10px;
   height: 1px;
   width: 0;
   background-color: white;
@@ -143,19 +143,25 @@ label, button, a, li {
   }
   .header__list {
     flex-direction: column;
-    width: 100%;
   }
   .header__a {
     padding: 20px 0;
   }
   .header__nav {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(99.87%);
+    width: 100%;
+    background-color: inherit;
     transition: max-height 0.2s linear;
     max-height: 0;
     overflow: hidden;
     align-self: center;
   }
   .header__nav.active {
-    max-height: 450px;
+    max-height: 290px;
   }
   .header__logo {
     display: flex;
@@ -167,6 +173,17 @@ label, button, a, li {
   }
   .bi {
     visibility: visible;
+  }
+}
+@media (width < 400px) {
+  .header {
+    padding-inline: 1rem;
+  }
+  .header__nav {
+    padding-inline: 2rem;
+  }
+  .header__list {
+    width: 100%;
   }
 }
 .text {
