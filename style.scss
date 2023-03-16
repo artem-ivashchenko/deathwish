@@ -24,6 +24,10 @@ body {
     background-color: #2a2a2a;
 }
 
+label {
+  text-transform: uppercase;
+}
+
 %resets {
   text-decoration: none;
   color: white;
@@ -74,7 +78,7 @@ label {
     align-items: stretch;
 
     min-height: $header-height;
-    padding: 0 7%;
+    padding: 0 65px;
 
     background-color: #111112;
     user-select: none;
@@ -158,13 +162,13 @@ label {
       font-family: Comfortaa, cursive;
       font-size: 16px;
       padding: 9px 25px;
-      background-color: rgba(177, 49, 49, 1);
+      background-color: rgb(169, 70, 3);
       border: none;
       cursor: pointer;
       border-radius: 50px;
-
+      transition: all 0.3s linear;
       &:hover {
-        background-color: rgba(177, 49, 49, 0.8);
+        background-color: rgba(169, 70, 3, 0.7);
       }
     }
 }

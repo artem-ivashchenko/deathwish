@@ -18,6 +18,10 @@ body {
   background-color: #2a2a2a;
 }
 
+label {
+  text-transform: uppercase;
+}
+
 label, button, a, li {
   text-decoration: none;
   color: white;
@@ -47,7 +51,7 @@ label, button, a, li {
   justify-content: space-between;
   align-items: stretch;
   min-height: 100px;
-  padding: 0 7%;
+  padding: 0 65px;
   background-color: #111112;
   user-select: none;
 }
@@ -114,13 +118,14 @@ label, button, a, li {
   font-family: Comfortaa, cursive;
   font-size: 16px;
   padding: 9px 25px;
-  background-color: rgb(177, 49, 49);
+  background-color: rgb(169, 70, 3);
   border: none;
   cursor: pointer;
   border-radius: 50px;
+  transition: all 0.3s linear;
 }
 .header__contact:hover {
-  background-color: rgba(177, 49, 49, 0.8);
+  background-color: rgba(169, 70, 3, 0.7);
 }
 
 .bi {
