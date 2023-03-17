@@ -62,6 +62,11 @@ label {
   background-position: right;
   text-align: center;
   user-select: none;
+
+  &__label {
+    text-shadow: 3px 3px 20px #d45906,
+    -2px 1px 30px #d45906;
+  }
 }
 
 /* Navbar */
@@ -195,7 +200,7 @@ label {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  color: rgb(212, 89, 6);
+  color: #d45906;
   text-align: center;
   text-shadow: 1px 7px 5px rgba(227,203,173,1);
   
@@ -225,6 +230,151 @@ label {
   &__button {
     font-weight: 600;
     box-shadow: rgb(224, 202, 158) 0px 20px 30px -10px;
+  }
+}
+
+.description-section {
+  min-height: calc(100vh - $header-height);
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(17,17,18,1) 25%);
+
+  &__intro {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 20px;
+    margin: auto;
+
+    gap: 30px;
+    padding: 40px;
+    min-width: 200px;
+  }
+
+  &__heading {
+    position: relative;
+    font-size: 14px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left:50%;
+
+      width:  50%;
+      height: 5px;
+      border-radius: 5px;
+      transform: translateX(-50%);
+      transition: width 0.4s linear;
+
+      background-color: #d45906;
+    }
+
+    &:hover::after {
+      width: 100%; 
+    } 
+  }
+
+  &__desc {
+    font-size: 10px;
+  }
+
+  &__eye {
+    width: 50px;
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    padding: 40px;
+    margin: auto;
+  }
+}
+
+.quote{
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+  &__pic {
+    width: 300px;
+    max-width: 100%;
+  }
+}
+
+.quote-words{
+  line-height: 20px;
+  &__heading {
+    padding: 20px 0;
+    color: #d45906;
+  }
+
+  &__text{
+
+    &--highlight {
+      color: #d45906;
+    }
+  } 
+}
+
+.description {
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+  &__pic {
+    width: 300px;
+    max-width: 100%;
+  }
+}
+
+.description-words {
+  line-height: 20px;
+  &__text {
+    text-align: justify;
+    padding: 2rem;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    text-transform: uppercase;
+
+
+    border-radius: 10px;
+    
+    padding: 1rem;
+    margin: auto;
+    min-width: 150px;
+    width: 300px;
+    background-color: #d45906;
+    transition: all .3s linear;
+
+    &:hover {
+      box-shadow: rgba(101, 100, 100, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+      transform: translateY(-10%);
+    }
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  &__column-2 {
+    // flex: 1;
+    flex-basis: 47%;
+    min-width: 200px;
   }
 }
 
@@ -258,6 +408,7 @@ label {
   
       &.active {
         max-height: 300px;
+        border-bottom: 1px solid #d45906;
       }
     }
 
@@ -294,6 +445,6 @@ label {
 }
 
 .test {
-  height: 100px;
-  background-color: violet;
+  height: 400px;
+  background-color: #d45906;
 }
