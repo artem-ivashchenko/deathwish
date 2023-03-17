@@ -42,6 +42,7 @@ label, button, a, li {
 
 /* Navbar */
 .header {
+  z-index: 9999;
   position: sticky;
   top: 0;
   left: 0;
@@ -156,9 +157,14 @@ label, button, a, li {
   justify-content: center;
   align-items: center;
   font-weight: 600;
+  font-size: 0.8125rem;
+  font-size: clamp(0.8125rem, 0.7090517241rem + 0.5172413793vw, 1rem);
   gap: 20px;
-  min-width: 300px;
-  width: 300px;
+  backdrop-filter: blur(4px);
+  padding: 1rem;
+  border-radius: 20%;
+  min-width: 200px;
+  width: 200px;
   margin: auto;
 }
 .first-section__button {
@@ -190,9 +196,9 @@ label, button, a, li {
     align-self: center;
   }
   .header__nav.active {
-    max-height: 290px;
+    max-height: 300px;
   }
-  .header__contact {
+  .header__button {
     margin-bottom: 20px;
   }
   .header__list {

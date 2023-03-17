@@ -67,6 +67,7 @@ label {
 /* Navbar */
 
 .header{
+    z-index: 9999;
     position: sticky;
     top: 0;
     left: 0;
@@ -200,16 +201,24 @@ label {
   
   
   &__intro {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-weight: 600;
 
+    font-size: 0.8125rem;
+    font-size: clamp(0.8125rem, 0.709051724137931rem + 0.5172413793103449vw, 1rem);
+
     gap: 20px;
 
-    min-width: 300px;
-    width: 300px;
+    backdrop-filter: blur(4px);
+    padding: 1rem;
+    border-radius: 20%;
+
+    min-width: 200px;
+    width: 200px;
     margin:auto;
   }
 
@@ -232,7 +241,7 @@ label {
     }
 
     &__nav {
-
+      
       display: flex;
       justify-content: center;  
       position: absolute;
@@ -248,11 +257,11 @@ label {
       align-self: center;
   
       &.active {
-        max-height: 290px;
+        max-height: 300px;
       }
     }
 
-    &__contact {
+    &__button {
       margin-bottom: 20px;
     }
 
@@ -268,7 +277,6 @@ label {
   .bi {
     visibility: visible;
   }
-
 }
 
 @media (width <= 400px) {
