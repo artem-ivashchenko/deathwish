@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
-/* rgba(177, 49, 49, 1) */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;600&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -11,7 +10,7 @@ html {
 }
 
 body {
-  font-family: Comfortaa, cursive;
+  font-family: "Comfortaa", arial, sans-serif;
   font-size: 16px;
   letter-spacing: 1px;
   color: white;
@@ -32,7 +31,7 @@ label, button, a, li {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 150px;
   background-image: url(/photos/hat_banner.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -113,8 +112,10 @@ label, button, a, li {
   align-items: center;
   padding: 0 30px;
 }
-.header__contact {
-  font-family: Comfortaa, cursive;
+
+.button {
+  display: inline-block;
+  font-family: "Comfortaa", cursive;
   font-size: 16px;
   padding: 9px 25px;
   background-color: rgb(169, 70, 3);
@@ -123,7 +124,7 @@ label, button, a, li {
   border-radius: 50px;
   transition: background-color 0.3s linear;
 }
-.header__contact:hover {
+.button:hover {
   background-color: rgba(169, 70, 3, 0.7);
 }
 
@@ -136,16 +137,44 @@ label, button, a, li {
   color: white;
 }
 
+.first-section {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 150px - 100px);
+  background-image: url(/photos/main_section_background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: rgb(212, 89, 6);
+  text-align: center;
+  text-shadow: 1px 7px 5px rgb(227, 203, 173);
+}
+.first-section__intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  gap: 20px;
+  min-width: 300px;
+  width: 300px;
+  margin: auto;
+}
+.first-section__button {
+  font-weight: 600;
+  box-shadow: rgb(224, 202, 158) 0px 20px 30px -10px;
+}
+
 @media (width <= 800px) {
   .header {
     flex-direction: column;
     align-items: space-between;
   }
-  .header__list {
-    flex-direction: column;
-  }
-  .header__a {
-    padding: 20px 0;
+  .header__logo {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
   }
   .header__nav {
     display: flex;
@@ -163,19 +192,20 @@ label, button, a, li {
   .header__nav.active {
     max-height: 290px;
   }
-  .header__logo {
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-  }
   .header__contact {
     margin-bottom: 20px;
+  }
+  .header__list {
+    flex-direction: column;
+  }
+  .header__a {
+    padding: 20px 0;
   }
   .bi {
     visibility: visible;
   }
 }
-@media (width < 400px) {
+@media (width <= 400px) {
   .header {
     padding-inline: 1rem;
   }
@@ -186,9 +216,9 @@ label, button, a, li {
     width: 100%;
   }
 }
-.text {
-  margin: auto;
-  max-width: 400px;
+.test {
+  height: 100px;
+  background-color: violet;
 }
 
 /*# sourceMappingURL=style.css.map */

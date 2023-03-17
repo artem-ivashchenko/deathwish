@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;600&display=swap');
 
-/* rgba(177, 49, 49, 1) */
 
 $header-height: 100px;
-$hat-height: $header-height * 2;
+$hat-height: $header-height * 1.5;
 $font-size: 16px;
 
 html {
@@ -17,7 +16,7 @@ html {
 }
 
 body {
-    font-family: Comfortaa, cursive;
+    font-family: 'Comfortaa',arial, sans-serif;
     font-size: $font-size;
     letter-spacing: 1px;
     color: white;
@@ -157,20 +156,22 @@ label {
       align-items: center;
       padding: 0 30px;
     }
+    
+}
 
-    &__contact {
-      font-family: Comfortaa, cursive;
-      font-size: 16px;
-      padding: 9px 25px;
-      background-color: rgb(169, 70, 3);
-      border: none;
-      cursor: pointer;
-      border-radius: 50px;
-      transition: background-color 0.3s linear;
-      &:hover {
-        background-color: rgba(169, 70, 3, 0.7);
-      }
-    }
+.button {
+  display: inline-block;
+  font-family: 'Comfortaa', cursive;
+  font-size: 16px;
+  padding: 9px 25px;
+  background-color: rgb(169, 70, 3);
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.3s linear;
+  &:hover {
+    background-color: rgba(169, 70, 3, 0.7);
+  }
 }
 
 .bi {
@@ -183,45 +184,85 @@ label {
   }
 }
 
+.first-section {
+  display: flex;
+  align-items: center;
+
+  min-height: calc(100vh - $hat-height - $header-height);
+  background-image: url(/photos/main_section_background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: rgb(212, 89, 6);
+  text-align: center;
+  text-shadow: 1px 7px 5px rgba(227,203,173,1);
+  
+  
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+
+    gap: 20px;
+
+    min-width: 300px;
+    width: 300px;
+    margin:auto;
+  }
+
+  &__button {
+    font-weight: 600;
+    box-shadow: rgb(224, 202, 158) 0px 20px 30px -10px;
+  }
+}
+
+
 @media (width <= 800px) {
   .header {
     flex-direction: column;
     align-items: space-between;
-  }
-  .header__list {
-    flex-direction: column;  
-  }
-  .header__a {
-    padding: 20px 0;
-  }
-  .header__nav {
 
-    display: flex;
-    justify-content: center;
-    position: absolute;
-
-    bottom: 0;
-    transform: translateY(99.87%);
-    width: 100%;
-    background-color: inherit;
-
-    transition: max-height .2s linear;
-    max-height: 0;
-    overflow: hidden;
-    align-self: center;
-
-    &.active {
-      max-height: 290px;
+    &__logo {
+      display: flex;
+      justify-content: space-between;
+      height: $header-height;
     }
-  }
-  .header__logo {
-    display: flex;
-    justify-content: space-between;
-    height: $header-height;
-  }
 
-  .header__contact {
-    margin-bottom: 20px;
+    &__nav {
+
+      display: flex;
+      justify-content: center;  
+      position: absolute;
+  
+      bottom: 0;
+      transform: translateY(99.87%);
+      width: 100%;
+      background-color: inherit;
+  
+      transition: max-height .2s linear;
+      max-height: 0;
+      overflow: hidden;
+      align-self: center;
+  
+      &.active {
+        max-height: 290px;
+      }
+    }
+
+    &__contact {
+      margin-bottom: 20px;
+    }
+
+    &__list {
+      flex-direction: column;  
+    }
+
+    &__a {
+      padding: 20px 0;
+    }
   }
 
   .bi {
@@ -230,7 +271,7 @@ label {
 
 }
 
-@media (width < 400px) {
+@media (width <= 400px) {
   .header {
     padding-inline: 1rem;
 
@@ -242,9 +283,9 @@ label {
       width: 100%;
     }
   }
-  
 }
-.text {
-  margin: auto;
-  max-width: 400px;
+
+.test {
+  height: 100px;
+  background-color: violet;
 }
