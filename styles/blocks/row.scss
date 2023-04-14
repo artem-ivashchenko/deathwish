@@ -1,0 +1,46 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  &--footer {
+    justify-content: stretch;
+  }
+  &__column-2 {
+    flex: 1;
+    flex-basis: 47%;
+    min-width: 200px;
+  }
+
+  &__column-4 {
+    flex-grow:1;
+    flex-basis: 23%;
+    min-width:200px;
+  }
+}
+
+@include onTablet {
+  .row {
+    &__column-2 {
+      flex-basis: 100%;
+    }
+
+    &__column-4{
+      flex-basis: 48%;
+    }
+  }
+}
+
+@include onMobile {
+  .row {
+    &--footer {
+      flex-direction: column;
+    }
+
+    &__column-4{
+      flex-basis: 100%;
+    }
+  }
+}

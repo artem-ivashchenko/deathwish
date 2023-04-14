@@ -1,0 +1,70 @@
+.footer {
+  background-color: #111112;
+  padding: 50px 2rem 0;
+ 
+  & h3{
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  & p {
+    color: #d45906;
+    font-size: 13px;
+  }
+
+  &__download {
+    text-align: center;
+  }
+
+  &__apps-pics {
+    width: 140px;
+  }
+
+  &__apps-desc {
+    margin-bottom: 10px;
+  }
+
+  &__nure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__nure-pic {
+    margin-bottom: 10px;
+    width: 50px;
+  }
+
+  &__links {
+    text-align: center;
+  }
+
+  &__link {
+    display: block;
+    width: max-content;
+    margin: auto;
+    box-sizing: border-box;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3;
+    margin-bottom: 10px;
+
+    &:hover {
+      border-bottom: 1px solid #d45906;
+    }
+  }
+
+  &__link-content {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__name {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+}

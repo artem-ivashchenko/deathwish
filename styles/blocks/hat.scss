@@ -1,0 +1,18 @@
+.hat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: $hat-height;
+  background-image: url(./photos/hatbanner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  text-align: center;
+  user-select: none;
+
+  &__label {
+    text-shadow: 3px 3px 20px #d45906,
+    -2px 1px 30px #d45906;
+  }
+}

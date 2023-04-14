@@ -14,21 +14,56 @@
     <div class="hat">
       <label class="hat__label">Expulsion or treat!</label>
     </div>
+
     <header class="header">
       <div class="header__logo">
         Deathwish
-        <i class="bi bi-list hamburger"></i>
+        <a href="#menu">
+          <i class="bi bi-list hamburger"></i>
+        </a>
       </div>
       <div class="header__nav">
         <ul class="header__list">
-          <li class="header__li header__li--current-page"><a class="header__a" href="#">Home</a></li>
-          <li class="header__li"><a class="header__a" href="#">About</a></li>
-          <li class="header__li"><a class="header__a" href="#">Services</a></li>
-          <a href="#" class="header__button button">Contact</a>
+          <li class="header__li"><a class="header__a" href="#">Home</a></li>
+          <li class="header__li"><a class="header__a" href="#about">About</a></li>
+          <li class="header__li"><a class="header__a" href="#contact">Contact</a></li>
+          <a href="https://nure.ua/" target="_blank" class="header__button button">Site</a>
         </ul>
       </div>
-      
     </header>
+
+    <div class="menu" id="menu">
+      <div class="container">
+        <div class="menu__content">
+          <div class="menu__top">
+            <div class="menu__image-container">
+              <img class="menu__image" src="photos/eye-ball.png">
+            </div>
+
+            <div class="menu__heading">Deathwish</div>
+            
+            <div class="menu__image-container">
+              <a href="#">
+                <img class="menu__image" src="photos/cross-close.svg">  
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <ul class="menu__list">
+              <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+              <li class="menu__item"><a class="menu__link" href="#about">About</a></li>
+              <li class="menu__item"><a class="menu__link" href="#contact">Contact</a></li>
+              <a href="https://nure.ua/" target="_blank" class="menu__button button">Site</a>
+            </ul>
+          </div>
+          
+          <div class="hat menu__hat"></div>
+        </div>
+      </div>
+    </div>
+
+
     <main>
       <div class="first-section">
         <div class="first-section__intro">
@@ -41,6 +76,9 @@
       </div>
 
       <div class="description-section">
+        <a class="anchor" id="about"></a>
+        <h1 class="title">About</h1>
+        
         <div class="description-section__intro">
           <h2 class="description-section__heading">The celebration of the multicultural day of the Halloween is a free annual event hosted by NURE university for students</h2>
           <p class="description-section__desc">All the earned money will be sent to help Ukrainian millitary forces</p>
@@ -55,7 +93,7 @@
 
             <div class="quote-words row__column-2">
               <h2 class="quote-words__heading">What made you to bring the idea for such type of event?</h2>
-              <blockquote class="quote-words__text">"Our goal is to encourage students to participate in university's life through things they like. Thanks to the all who helped to organize this event and fundraising. If you are not part of our special celebration, you can join one of our <span class="quote-words__text--highlight">Halloween teams!</span>" — Artem Ivashchenko</blockquote>
+              <blockquote class="quote-words__text">"Our goal is to encourage students to participate in university's life through things they like. Thanks to the all who helped to organize this event and fundraising. If you are not part of our special celebration, you can join <span class="quote-words__text--highlight">Halloween individual competition!</span>" — Artem Ivashchenko</blockquote>
             </div>
           </div>
 
@@ -70,16 +108,52 @@
           </div>
         </div>
       </div>
+
+      <div class="contact-us-section">
+        <a class="anchor" id="contact"></a>
+        <h1 class="title">Contact</h1>
+
+        <div class="form">
+          <form action="#" class="form__form-section">
+            <input 
+              type="text"
+              class="form__input"
+              name ="name"
+              placeholder="Name"
+            >
+            <input 
+              type="email"
+              class="form__input"
+              name ="email"
+              placeholder="Email"
+            >
+            <textarea
+              name="question"
+              class="form__input form__input--textarea"
+              placeholder="Question"
+            ></textarea>
+
+            <button class="button button--contact">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
       <div class="row row--footer">
         <div class="footer__download row__column-4">
           <h3>Download our app</h3>
-          <p>Maps of the university, schedules and even more</p>
+          <p class="footer__apps-desc">Maps of the university, schedules and even more</p>
           <div class="footer__apps">
-            <img class="footer__apps-pics" src="photos/play-store.png" >
-            <img class="footer__apps-pics" src="photos/app-store.png" >
+            <a href="https://play.google.com/store/apps/details?id=com.nure.hub" target="_blank">
+              <img class="footer__apps-pics" src="photos/play-store.png" >
+            </a>
+
+            <a href="https://apps.apple.com/ua/app/knure-timetable/id797074875" target="_blank">
+              <img class="footer__apps-pics" src="photos/app-store.png">
+            </a>
           </div>
         </div>
 
@@ -91,23 +165,71 @@
 
         <div class="footer__links row__column-4">
           <h3>Useful links</h3>
-          <p>Official site</p>
-          <p>DL NURE</p>
-          <p>Info</p>
+
+          <a 
+            href="https://nure.ua/"
+            target="_blank"
+            class="footer__link"
+          >
+            <p class="footer__link-content">Official site</p>
+          </a>
+
+          <a
+            href="https://dl.nure.ua/"
+            target="_blank"
+            class="footer__link"
+          >
+            <p class="footer__link-content">DL NURE</p>
+          </a>
+          
+          <a
+            href="https://www.nure.info/"
+            target="_blank"
+            class="footer__link"
+          >
+            <p class="footer__link-content">Info</p>
+          </a>
         </div>
 
         <div class="footer__links row__column-4">
           <h3>Follow us</h3>
-          <p>Instagram</p>
-          <p>Youtube</p>
-          <p>LinkedIn</p>
-          <P>Soundcloud</P>
-          <p>Facebook</p>
+          <a 
+            href="https://instagram.com/khnure_official?igshid=YmMyMTA2M2Y="
+            target="_blank"
+            class="footer__link"
+          >
+            <p class="footer__link-content">Instagram</p>
+          </a>
+
+          <a 
+            href="https://www.youtube.com/channel/UCFwYsa2_dfuRroZPF8v3ZjA" 
+            target="_blank"
+            class="footer__link"
+          >
+            <p class="footer__link-content">Youtube</p>
+          </a>
+
+          <a
+            href="https://ru.linkedin.com/school/kharkiv-national-university-of-radioelectronics"
+            target="_blank"
+            class="footer__link"
+          >
+            <p class="footer__link-content">LinkedIn</p>
+          </a>
+
+          <a 
+            href="https://www.facebook.com/nureKharkiv/?locale=ru_RU"
+            target="_blank"
+            class="footer__link"
+          >
+            <p class="footer__link-content">Facebook</p>
+          </a>
         </div>
       </div>
       <hr style="margin: 1rem 0;">
       <h1 class="footer__name">Artem Ivashchenko</h1>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

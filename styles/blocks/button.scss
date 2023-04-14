@@ -1,0 +1,18 @@
+.button {
+  display: inline-block;
+  font-family: 'Comfortaa', cursive;
+  font-size: 16px;
+  padding: 9px 25px;
+  background-color: rgb(169, 70, 3);
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.3s linear;
+  &:hover {
+    background-color: rgba(169, 70, 3, 0.7);
+  }
+
+  &--contact {
+    width: 100%;
+  }
+}

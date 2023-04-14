@@ -1,0 +1,33 @@
+@mixin onTablet {
+  @media (width <= 800px) {
+    @content;
+  }
+}
+
+@mixin onMobile {
+  @media (width <= 400px) {
+    @content;
+  }
+}
+
+@mixin title-icons {
+    content: "";
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @include onTablet {
+      width: 36px;
+      height: 36px;
+    }
+
+    @include onMobile {
+      width: 28px;
+      height: 28px;
+
+    }
+}

@@ -1,0 +1,10 @@
+.description {
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+  &__pic {
+    width: 300px;
+    max-width: 100%;
+  }
+}

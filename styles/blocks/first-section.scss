@@ -1,0 +1,43 @@
+.first-section {
+  display: flex;
+  align-items: center;
+
+  min-height: calc(100vh - $hat-height - $header-height);
+  background-image: url(./photos/main.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #d45906;
+  text-align: center;
+  text-shadow: 1px 7px 5px rgba(227,203,173,1);
+  
+  
+  &__intro {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+
+    font-size: 0.8125rem;
+    font-size: clamp(0.8125rem, 0.709051724137931rem + 0.5172413793103449vw, 1rem);
+
+    gap: 20px;
+
+    backdrop-filter: blur(4px);
+    padding: 1rem;
+    border-radius: 20%;
+
+    min-width: 200px;
+    width: 200px;
+    margin:auto;
+  }
+
+  &__button {
+    font-weight: 600;
+    text-shadow: none;
+    box-shadow: rgb(224, 202, 158) 0px 20px 30px -10px;
+  }
+}

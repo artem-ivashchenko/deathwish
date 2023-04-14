@@ -1,0 +1,23 @@
+.bi {
+  visibility: hidden;
+  font-size: 36px;
+  cursor: pointer;
+
+  &::before {
+    color: white;
+  }
+}
+
+
+@include onTablet {
+  .bi {
+   
+    visibility: visible;
+  }
+}
+
+@include onMobile {
+  .bi {
+    font-size: 32px;
+  }
+}
