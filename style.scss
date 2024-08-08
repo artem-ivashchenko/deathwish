@@ -96,14 +96,14 @@ i.bi {
     }
 
     .header__nav {
-        transition: max-height 0.2s linear;
+        transition: height 0.2s linear;
 
-        max-height: 0;
+        height: 0;
         overflow: hidden;
 
         &.active {
-            // TODO: dynamic height size
-            max-height: 150px;
+            height: auto;
+            height: calc-size(auto);
         }
     }
 
